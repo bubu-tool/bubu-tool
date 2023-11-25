@@ -57,8 +57,8 @@ How to Use
 
     bash
 
-git clone https://github.com/bubupewpew/Discord-Toolkit.git
-cd Discord-Toolkit
+git clone https://github.com/bubu-tool/bubu-tool.git
+cd bubu-tool
 
 Install Dependencies:
 
@@ -68,9 +68,8 @@ pip install -r requirements.txt
 
 Run the Toolkit:
 
-bash
 
-    python discord_toolkit.py
+    python bubu.py
 
     Choose an Option:
         Enter the number corresponding to the desired functionality.
