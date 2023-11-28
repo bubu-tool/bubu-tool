@@ -105,7 +105,7 @@ def token_info(token):
         print(f"Impossible de récupérer les informations. Code d'état : {res.status_code}")
 
 def ddos(url):
-    print("""
+    print(Colorate.Horizontal(Colors.blue_to_cyan, """
     DDDDDDDDDDDDD      DDDDDDDDDDDDD             OOOOOOOOO        SSSSSSSSSSSSSSS 
     D::::::::::::DDD   D::::::::::::DDD        OO:::::::::OO    SS:::::::::::::::S
     D:::::::::::::::DD D:::::::::::::::DD    OO:::::::::::::OO S:::::SSSSSS::::::S
@@ -121,7 +121,7 @@ def ddos(url):
     D:::::::::::::::DD D:::::::::::::::DD    OO:::::::::::::OO S::::::SSSSSS:::::S
     D::::::::::::DDD   D::::::::::::DDD        OO:::::::::OO   S:::::::::::::::SS 
     DDDDDDDDDDDDD      DDDDDDDDDDDDD             OOOOOOOOO      SSSSSSSSSSSSSSS
-    """)
+    """) + Style.RESET_ALL)
 
     try:
         threads = int(input("Threads : "))
@@ -179,6 +179,7 @@ def home():
     print(Colorate.Horizontal(Colors.red_to_yellow, "    \"`                         \"`                   "))
     print(Colorate.Horizontal(Colors.rainbow, "[Ce tool a été développé par bubu]"))
 
+    print(Colorate.Horizontal(Colors.red_to_yellow, "1. IP Lookup"))
     print(Colorate.Horizontal(Colors.red_to_yellow, "2. Recherche WHOIS sur un nom de domaine"))
     print(Colorate.Horizontal(Colors.red_to_yellow, "3. Recherche d'informations utilisateur Discord par ID"))
     print(Colorate.Horizontal(Colors.red_to_yellow, "4. OSINT Framework - Outils d'enquête"))
@@ -406,7 +407,7 @@ if __name__ == '__main__':
             import string
             import time
 
-            print("""
+            print(Colorate.Horizontal(Colors.red_to_purple, """
 
                    oo   dP                              dP                         dP                         
               88                              88                         88                         
@@ -420,17 +421,17 @@ dP    dP dP   dP   dP       `88888P' `88888P' dP    dP `88888P' `88888P' dP   `Y
             ║  Dev : Bubu   ║  Info  : Nitro Generator ║  Programm  : Option 15   ║
             ╚═══════════════════════╩══════════════════════════╩═══════════════════════╗
             
-            """)
+"""))
+
             time.sleep(0.1)
-            print("Générateur de nitro")
+            print(Colorate.Horizontal(Colors.red_to_purple, "Générateur de nitro"))
             time.sleep(0.1)
-            print("Crée par bubu .\n")
+            print(Colorate.Horizontal(Colors.red_to_purple, "Crée par bubu .\n"))
             time.sleep(0.1)
 
-            num = int(input('Input How Many Codes to Generate and Check: '))
-
+            num = int(input(Colorate.Horizontal(Colors.red_to_purple, 'Input How Many Codes to Generate and Check: ')))
             with open("Nitro Codes.txt", "w", encoding='utf-8') as file:
-                print("Please wait ...")
+                print(Colorate.Horizontal(Colors.red_to_purple, "Please wait ..."))
 
                 start = time.time()
 
@@ -442,7 +443,8 @@ dP    dP dP   dP   dP       `88888P' `88888P' dP    dP `88888P' `88888P' dP   `Y
 
                     file.write(f"https://discord.gift/{code}\n")
 
-                print(f"Generated {num} codes | Time taken: {time.time() - start}\n")
+
+                print(Colorate.Horizontal(Colors.red_to_purple, f"Generated {num} codes | Time taken: {time.time() - start}\n"))
 
             with open("Nitro Codes.txt") as file:
                 for line in file.readlines():
@@ -453,17 +455,18 @@ dP    dP dP   dP   dP       `88888P' `88888P' dP    dP `88888P' `88888P' dP   `Y
                     r = requests.get(url)
 
                     if r.status_code == 200:
-                        print(f" Valid | {nitro} ")
+                        print(Colorate.Horizontal(Colors.red_to_purple, f" Valid | {nitro} "))
                         break
                     else:
-                        print(f" Invalid | {nitro} ")
+                        print(Colorate.Horizontal(Colors.red_to_purple, f" Invalid | {nitro} "))
 
 
-            print("Discord : https://discord.gg/9YFRGEfNCn\n")
+
+            print("Discord : soon\n")
 
             time.sleep(0.2)
 
-            input("\nCodes generated !! If Valide codes.txt is empty retry to gen 20 millions code ;) ")
+            input(Colorate.Horizontal(Colors.red_to_purple, "\nCodes generated !! If Valide codes.txt is empty retry to gen 20 millions code ;) "))
         elif choice == "16":
             import random
             import string
@@ -471,16 +474,17 @@ dP    dP dP   dP   dP       `88888P' `88888P' dP    dP `88888P' `88888P' dP   `Y
 
             import requests
             from colorama import Fore, Style
-            print("::::::::::::   ...      :::  .   .,:::::::::.    :::.  .,-::::: :::::::..    :::.       .,-:::::  :::  .   .,:::::: :::::::..   ")
-            print(";;;;;;;;''''.;;;;;;;.   ;;; .;;,.;;;;''''`;;;;,  `;;;,;;;'````' ;;;;``;;;;   ;;`;;    ,;;;'````'  ;;; .;;,.;;;;'''' ;;;;``;;;;  ")
-            print("[[    ,[[     \\[[, [[[[[/'   [[cccc   [[[[[. '[[[[[         [[[,/[[['  ,[[ '[[,  [[[         [[[[[/'   [[cccc   [[[,/[[['  ")
-            print("$$    $$$,     $$$_$$$$,     $$\"\"\"\"   $$$ \"Y$c$$$$$         $$$$$$c   c$$$cc$$$c $$$        _$$$$,     $$\"\"\"\"   $$$$$$c   ") 
-            print("88,   \"888,_ _,88P\"888\"88o,  888oo,__ 888    Y88`88bo,__,o, 888b \"88bo,888   888,`88bo,__,o,\"888\"88o,  888oo,__ 888b \"88bo, ")   
-            print("MMM     \"YMMMMMP\"  MMM \"MMP\" \"\"\"\"YUMMMMMM     YM  \"YUMMMMMP\"MMMM   \"W\" YMM   \"\"`   \"YUMMMMMP\"MMM \"MMP\" \"\"\"\"YUMMMMMMM   \"W\" ")
-
+            print(Colorate.Horizontal(Colors.green_to_blue, """ 
+            ::::::::::::   ...      :::  .   .,:::::::::.    :::.  .,-::::: :::::::..    :::.       .,-:::::  :::  .   .,:::::: :::::::..   
+            ;;;;;;;;''''.;;;;;;;.   ;;; .;;,.;;;;''''`;;;;,  `;;;,;;;'````' ;;;;``;;;;   ;;`;;    ,;;;'````'  ;;; .;;,.;;;;'''' ;;;;``;;;;  
+            [[    ,[[     \\[[, [[[[[/'   [[cccc   [[[[[. '[[[[[         [[[,/[[['  ,[[ '[[,  [[[         [[[[[/'   [[cccc   [[[,/[[['  
+            $$    $$$,     $$$_$$$$,     $$\"\"\"\"   $$$ \"Y$c$$$$$         $$$$$$c   c$$$cc$$$c $$$        _$$$$,     $$\"\"\"\"   $$$$$$c   
+            88,   \"888,_ _,88P\"888\"88o,  888oo,__ 888    Y88`88bo,__,o, 888b \"88bo,888   888,`88bo,__,o,\"888\"88o,  888oo,__ 888b \"88bo,    
+            MMM     \"YMMMMMP\"  MMM \"MMP\" \"\"\"\"YUMMMMMM     YM  \"YUMMMMMP\"MMMM   \"W\" YMM   \"\"`   \"YUMMMMMP\"MMM \"MMP\" \"\"\"\"YUMMMMMMM   \"W\" 
+            """))
 
                          
-            attempts_per_second = 7  # Keep low or you wil get IP banned (Max 16-17) | See: https://discord.com/developers/docs/topics/rate-limits
+            attempts_per_second = 7  
 
             def getheaders(token=None, content_type="application/json"):
                 headers = {
@@ -500,6 +504,7 @@ dP    dP dP   dP   dP       `88888P' `88888P' dP    dP `88888P' `88888P' dP   `Y
 
                 if r.status_code == 200:
                     print(Fore.GREEN + f"- Valid Token. ({token}) | [{r.status_code}] | (Written to file)\n" + Style.RESET_ALL)
+
                     with open("valid-token.txt", "a") as f:
                         f.write(f"\n{token}\n")
 
