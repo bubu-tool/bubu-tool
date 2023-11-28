@@ -102,3 +102,7 @@ Disclaimer
 This toolkit is provided as-is and is meant for educational and informational purposes only. The author is not responsible for any misuse or illegal activities performed with these tools. Use at your own risk.
 
 you can contact me on tiktok : www.tiktok.com/@bubu_tool
+[+] update 1.1 :
+Ajout de couleur avec pystyle
+Correction de cerains bugs
+Ajout de l'option 1
