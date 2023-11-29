@@ -36,7 +36,7 @@ def main():
     print("\n" + footer)
 
     # Apply red-to-blue gradient to the input prompt
-    input_prompt = center_text("Press Enter to unleash the hacker...")
+    input_prompt = center_text("Press Enter to open the tool ...")
 
     # Prompt for input
     input(input_prompt)
