@@ -1,3 +1,51 @@
+import shutil
+from pystyle import Colorate, Colors
+
+def center_text(text):
+    terminal_width = shutil.get_terminal_size().columns
+    left_padding = (terminal_width - max(len(line) for line in text.split('\n'))) // 2
+    return "\n".join(Colorate.Horizontal(Colors.red_to_blue, " " * left_padding + line) for line in text.split('\n'))
+
+def main():
+    title = """
+    '########::'##::::'##:'########::'##::::'##::::::::::'########::'#######:::'#######::'##:::::::
+    ##.... ##: ##:::: ##: ##.... ##: ##:::: ##::::::::::... ##..::'##.... ##:'##.... ##: ##:::::::
+    ##:::: ##: ##:::: ##: ##:::: ##: ##:::: ##::::::::::::: ##:::: ##:::: ##: ##:::: ##: ##:::::::
+    ########:: ##:::: ##: ########:: ##:::: ##:'#######:::: ##:::: ##:::: ##: ##:::: ##: ##:::::::
+    ##.... ##: ##:::: ##: ##.... ##: ##:::: ##:........:::: ##:::: ##:::: ##: ##:::: ##: ##:::::::
+    ##:::: ##: ##:::: ##: ##:::: ##: ##:::: ##::::::::::::: ##:::: ##:::: ##: ##:::: ##: ##:::::::
+    ########::. #######:: ########::. #######:::::::::::::: ##::::. #######::. #######:: ########:
+    ........::::.......:::........::::.......:::::::::::::::..::::::.......::::.......:::........::
+    """
+
+    styled_title = center_text(title)
+
+    # Print the centered styled title
+    print(styled_title)
+
+    # Add a hacker-themed footer
+    footer = center_text("""
+    -----------------------------------------------------
+    |             Welcome to the Hacker Zone             |
+    |          Authorized access only. Trespassers       |
+    |           will be prosecuted to the full            |
+    |                 extent of the law.                 |
+    -----------------------------------------------------
+    """)
+
+    print("\n" + footer)
+
+    # Apply red-to-blue gradient to the input prompt
+    input_prompt = center_text("Press Enter to unleash the hacker...")
+
+    # Prompt for input
+    input(input_prompt)
+
+if __name__ == "__main__":
+    main()
+
+
+
 import requests
 import socket
 import webbrowser
