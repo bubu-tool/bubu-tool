@@ -1,4 +1,4 @@
 requests
 discord-webhook
 colorama
-python-nmap
+python-nmap 
